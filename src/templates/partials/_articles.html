@@ -1,0 +1,22 @@
+<!--Articles block BEGIN-->
+  <div class="articles"> 
+   {{mixins.block_title('Статьи')}}
+    <div class="block_content">
+    {% import "data/articles.html" as items %} 
+    {% for item in items.articles %}
+    <!--      Article BEGIN-->
+       <div class="post"> 
+           <div class="meta">
+                <img src="../img/{{item.image}}.jpg" alt="" class="post_img">
+                <time class="post_date">{{item.date}}</time>
+                <div class="post_category">{{item.category}}</div>
+                <h2 class="post_title">{{item.title}}</h2>
+                <div class="post_author">Автор: <a href="#" class="author_name">{{item.author}}</a></div>
+            </div>
+            <p class="post_text"> {{item.text}} <a href="#" class="more">...</a> </p>
+        </div>
+    <!--      Article END-->
+        {% endfor %}
+</div>
+</div>
+<!--Articles block END-->

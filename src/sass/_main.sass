@@ -1,0 +1,47 @@
+.column
+    width: $width
+    float: left
+    margin-right: (100% - $width*3)/2
+    &:last-of-type
+        margin-right: 0
+
+.block_title
+    +image('title-bg.png')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    text-align: center
+    margin-bottom: 15px
+    
+    .title
+        background-color: $title-gray
+        padding: 5px 25px
+        border-top: 4px solid $border-yellow
+        display: inline-block
+        cursor: pointer
+        +vertical
+        
+        a
+            font-family: Georgia, serif
+            font-size: 16px
+            font-weight: 300
+            color: #fff
+            text-decoration: none
+    
+.block_content
+    margin-bottom: 20px
+        
+.icon
+    +image('icon-sprite.png')
+    width: 16px
+    height: 12px
+    padding: 10px
+    background-position: 0 0
+    background-repeat: no-repeat
+    
+    &.eye
+        background-position: 0 12px
+    &.message
+        background-position: -17px 12px
+    &.camera
+        background-position: -38px 12px
+        margin-left: 5px

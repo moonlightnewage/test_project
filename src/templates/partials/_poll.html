@@ -1,0 +1,24 @@
+<!--Poll block BEGIN-->
+  <div class="poll"> 
+   {{mixins.block_title('Опрос дня')}}
+    <div class="block_content">
+        <table class="poll-table">
+         {% import "data/poll.html" as items %}
+<!--         Poll question BEGIN-->
+         <tr>
+               <td></td>
+               <td class="question">{{items.poll.question}}</td>
+           </tr>
+<!--           Poll question END-->
+          {% for item in items.poll.answers %}
+<!--           Poll answer BEGIN-->
+            <tr>
+                <td><input type="radio" name="variant"></td>
+                <td class="{% if item.padding %}padding{% endif %}">{{item.variant}}</td>
+            </tr>       
+<!--            Poll answer END -->
+          {% endfor %}
+        </table>
+      </div>
+</div>
+<!--Poll block END-->

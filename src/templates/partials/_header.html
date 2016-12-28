@@ -1,0 +1,11 @@
+<div class="container">
+    <nav class="top-menu">
+        <ul>
+            {% import "data/data.html" as items %} 
+            {% for item in items.top_menu%}
+            <li class="{%if item.active%}active{%endif%}"><a href="#!">{{item.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+

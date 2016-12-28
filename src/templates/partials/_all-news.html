@@ -1,0 +1,19 @@
+<!--All news block BEGIN-->
+<div class="all_news"> 
+   {{mixins.block_title('Все новости')}}
+    <div class="block_content">
+    {% import "data/all-news.html" as items %} 
+    {% for item in items.news %}
+    <!--    News post BEGIN-->
+        <div class="post {% if item.highlighted%}highlighted{%endif%}">
+	    <div class="post_date">{{item.date}}</div>
+	    {% if item.icon%}
+	    <span class="icon camera"></span>
+	    {%endif%}
+	    <div class="post_text {% if item.bold%}bold{%endif%}">{{item.text}}</div>
+        </div>
+    <!--    News post END-->
+    {% endfor %}
+    </div>
+</div>
+<!--All news block END-->

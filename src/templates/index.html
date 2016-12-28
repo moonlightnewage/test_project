@@ -1,0 +1,32 @@
+--- 
+title: Test page
+
+---
+
+{% extends "layouts/_layout.html" %} 
+
+{% block content %}
+<main id="content">
+    <div class="container">
+        <div class="column"> 
+        
+        {% include "partials/_main-news.html" %}
+        
+        {% include "partials/_all-news.html" %} 
+        
+        </div>
+        <div class="column"> 
+        
+        {% include "partials/_articles.html" %} 
+        
+        </div>
+        <div class="column">
+         
+        {% include "partials/_author-column.html" %}
+        
+        {% include "partials/_poll.html" %} 
+        
+        </div>
+    </div>
+</main> 
+{% endblock %}
